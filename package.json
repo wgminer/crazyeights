@@ -1,0 +1,36 @@
+{
+  "name": "kiosk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "qc": "git add . && git commit -a -m \"Quick commit\" && git push",
+    "start": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2uinc/kiosk.git"
+  },
+  "author": "wminer@2u.com",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/2uinc/kiosk/issues"
+  },
+  "homepage": "https://github.com/2uinc/kiosk#readme",
+  "dependencies": {
+    "autoprefixer": "^7.2.4",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.23.3",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "run-sequence": "^2.2.1"
+  }
+}
