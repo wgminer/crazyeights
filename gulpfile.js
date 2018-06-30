@@ -22,7 +22,7 @@ gulp.task('pug', () => gulp.src([
     .pipe(pug({ pretty: true }))
     .pipe(gulp.dest('docs')));
 
-gulp.task('mp3', () => gulp.src('src/**/*.mp3')
+gulp.task('mp3', () => gulp.src(['src/**/*.mp3', 'src/CNAME'])
     .pipe(gulp.dest('docs')));
 
 gulp.task('scss', () => gulp.src('./src/**/*.scss')
