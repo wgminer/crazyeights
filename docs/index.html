@@ -3,16 +3,79 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>UX Kiosk</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="//ddqt2avvbpaxu.cloudfront.net/cdn/v1/corp-prod/whitelabel.min.css">
-    <link rel="stylesheet" href="kiosk.css">
+    <title>Crazys Eights</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Space+Mono|Roboto|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
-    <div id="header">What are <span id="who"></span> saying about <span id="what"></span>?</div>
-    <div id="quote"></div>
-    <div id="footer">Powered by the User Experience Team</div>
-    <script src="//unpkg.com/typed.js@2.0.6/lib/typed.js"></script>
-    <script src="kiosk.js"></script>
+    <div class="instructions">
+      <div class="center">
+        <h1>Crazy 8s</h1>
+        <p>Crazy 8s is a simple, structured way to generate 8 unique ideas in 8 minutes. By pushing yourself to generate 8 different concepts, Crazy 8s helps you uncover non-obvious solutions. This design thinking method was popularized by Google and their <a href="https://designsprintkit.withgoogle.com/methods/sketch/crazy-8s/">Design Sprint</a>. All you need to get started is paper, markers, and a creative mind.</p>
+        <button class="js-start button primary">Begin</button>
+        <h2>Instructions</h2>
+        <ol>
+          <li>Fold a sheet of paper into 8 equal sections (8.5x11 will do).</li>
+          <li>Grab a chunky writing utensil (Sharpies are ideal).</li>
+          <li>Push the "Begin" button to start the 8 minute timer.</li>
+          <li>Sketch a different concept in each of the eight sections.</li>
+          <li>Have each person describe what they drew..</li>
+        </ol>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="card" id="1">
+        <div class="content">
+          <div class="front"> <span>1</span></div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card" id="2">
+        <div class="content">
+          <div class="front"> <span>2</span></div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card" id="3">
+        <div class="content">
+          <div class="front"> <span>3</span></div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card" id="4"> 
+        <div class="content">
+          <div class="front"> <span>4</span></div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card" id="5">
+        <div class="content">
+          <div class="front"> <span>5</span></div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card" id="6">
+        <div class="content">
+          <div class="front"> <span>6</span></div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card" id="7">
+        <div class="content">
+          <div class="front"> <span>7</span></div>
+          <div class="back"></div>
+        </div>
+      </div>
+      <div class="card" id="8">
+        <div class="content">
+          <div class="front"> <span>8</span></div>
+          <div class="back"></div>
+        </div>
+      </div>
+    </div>
+    <button class="restart js-restart">Restart</button>
+    <script src="https://unpkg.com/jquery@3.2.1/dist/jquery.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

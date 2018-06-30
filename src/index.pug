@@ -3,15 +3,68 @@ html(lang="en")
     head
         meta(charset="utf-8")
         meta(http-equiv="x-ua-compatible", content="ie=edge")
-        title UX Kiosk
-        meta(name="viewport", content="width=device-width, initial-scale=1")
-        //- link(rel="stylesheet", href="//fonts.googleapis.com/icon?family=Material+Icons")
-        link(rel="stylesheet", href="//ddqt2avvbpaxu.cloudfront.net/cdn/v1/corp-prod/whitelabel.min.css")
-        link(rel="stylesheet", href="kiosk.css")
-    body
-        #header What are <span id="who"></span> saying about <span id="what"></span>?
-        #quote
-        #footer Powered by the User Experience Team
+        title Crazys Eights
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Space+Mono|Roboto|Material+Icons")
+        link(rel="stylesheet", href="https://unpkg.com/normalize.css@8.0.0/normalize.css")
 
-        script(src="//unpkg.com/typed.js@2.0.6/lib/typed.js")
-        script(src="kiosk.js")
+        link(rel="stylesheet", href="main.css")
+    body
+        .instructions
+            .center
+                h1 Crazy 8s
+                p Crazy 8s is a simple, structured way to generate 8 unique ideas in 8 minutes. By pushing yourself to generate 8 different concepts, Crazy 8s helps you uncover non-obvious solutions. This design thinking method was popularized by Google and their <a href="https://designsprintkit.withgoogle.com/methods/sketch/crazy-8s/">Design Sprint</a>. All you need to get started is paper, markers, and a creative mind.
+                button.js-start.button.primary Begin
+
+                h2 Instructions
+                ol
+                    li Fold a sheet of paper into 8 equal sections (8.5x11 will do).
+                    li Grab a chunky writing utensil (Sharpies are ideal).
+                    li Push the "Begin" button to start the 8 minute timer.
+                    li Sketch a different concept in each of the eight sections.
+                    li Have each person describe what they drew..
+        .grid
+            #1.card
+                .content
+                    .front 
+                        span 1
+                    .back
+            #2.card
+                .content
+                    .front 
+                        span 2
+                    .back
+            #3.card
+                .content
+                    .front 
+                        span 3
+                    .back
+            #4.card 
+                .content
+                    .front 
+                        span 4
+                    .back
+            #5.card
+                .content
+                    .front 
+                        span 5
+                    .back
+            #6.card
+                .content
+                    .front 
+                        span 6
+                    .back
+            #7.card
+                .content
+                    .front 
+                        span 7
+                    .back
+            #8.card
+                .content
+                    .front 
+                        span 8
+                    .back
+
+        button.restart.js-restart Restart
+
+        script(src="https://unpkg.com/jquery@3.2.1/dist/jquery.js")
+        script(src="main.js")

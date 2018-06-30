@@ -22,16 +22,19 @@ gulp.task('pug', () => gulp.src([
     .pipe(pug({ pretty: true }))
     .pipe(gulp.dest('docs')));
 
+gulp.task('mp3', () => gulp.src('src/**/*.mp3')
+    .pipe(gulp.dest('docs')));
+
 gulp.task('scss', () => gulp.src('./src/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([ autoprefixer ]))
-    .pipe(concat('kiosk.css'))
+    .pipe(concat('main.css'))
     .pipe(gulp.dest('docs')));
 
-gulp.task('babel', () => gulp.src(['src/**/*.js', '!src/**/*.spec.js'])
+gulp.task('babel', () => gulp.src(['src/**/*.js'])
     .pipe(plumber())
     .pipe(babel({ presets: ['es2015'] }))
-    .pipe(concat('kiosk.js'))
+    .pipe(concat('main.js'))
     .pipe(gulp.dest('docs')));
 
 gulp.task('browser-sync', function() {
@@ -42,7 +45,7 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('build', cb => runSequence('clean', ['babel', 'pug', 'scss'], cb));
+gulp.task('build', cb => runSequence('clean', ['babel', 'mp3', 'pug', 'scss'], cb));
 
 gulp.task('watch', () => {
     gulp.watch('**/*.pug', { cwd: './src' }, ['pug']);
